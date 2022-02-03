@@ -6,6 +6,20 @@ def clear():
     os.system("cls")
 
 
+def print_hangman(values):
+    print()
+    print("\t +--------+")
+    print("\t |       | |")
+    print("\t {}       | |".format(values[0]))
+    print("\t{}{}{}      | |".format(values[1], values[2], values[3]))
+    print("\t {}       | |".format(values[4]))
+    print("\t{} {}      | |".format(values[5],values[6]))
+    print("\t         | |")
+    print("  _______________|_|___")
+    print("  `````````````````````")
+    print()
+
+
 def hangman_game(word):
     clear()
     word_display = []
@@ -25,6 +39,9 @@ def hangman_game(word):
         clear()
         print_hangman(show_hangman_values)
         print_word(word_display)
+        print()
+        print("Incorrect Guessues: ", incorrect_letters)
+        print()
 
 
 
