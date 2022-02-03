@@ -25,3 +25,18 @@ if __name__ == "__main__":
             print("Press", key, "to select", game_modes[key])
             print("Press", len(game_modes) + 1, "to quir.")
             print()
+        try:
+            mode_selction = int(input("Enter your preferred game mode: "))
+        except ValueError:
+            clear()
+            print("Invalid input. Try again!")
+            continue
+
+        if mode_selection > len(game_modes) + 1:
+            clear()
+            print("Invalid selction. Try again!")
+            continue
+        elif choice == len(game_modes) + 1:
+            print()
+            print("Thank you for playing hangman!")
+            break
