@@ -20,6 +20,16 @@ def print_hangman(values):
     print()
 
 
+def print_word(values):
+    print()
+    print("\t", end="")
+    for x in values:
+        print(x, end="")
+    print()
+
+
+
+
 def hangman_game(word):
     clear()
     word_display = []
