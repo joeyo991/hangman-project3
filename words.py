@@ -1,0 +1,1 @@
+easy = ["Bake", "Word", "List", "Four", "Five", "Nine", "Good", "Best", "Cute", "Zero", "Huge", "Cool", "Tree", "Race", "Rice", "Keep", "Lace", "Beam", "Game", "Mars", "Tide", "Ride", "Hide", "Exit", "Hope", "Cold", "From", "Need", "Stay", "Come"]
