@@ -6,6 +6,14 @@ def clear():
     os.system("cls")
 
 
+def hangman_game(word):
+    clear()
+    word_display = []
+    correct_letters = []
+    incorrect_letters = []
+    guesses = 0
+
+
 if __name__ == "__main__":
     clear()
 
@@ -43,4 +51,4 @@ if __name__ == "__main__":
 
         game_mode = game_modes[mode_select]
         word = random.choice(dataset[game_mode])
-
+        hangman_game(word)
