@@ -12,6 +12,20 @@ def hangman_game(word):
     correct_letters = []
     incorrect_letters = []
     guesses = 0
+    hangman_values = ['O', '/', '|', '\\', '|', '/', '\\']
+    show_hangman_values = [' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    for character in word:
+        if character.isalpha():
+            word_display.append('_')
+            correct_letters.append(character.upper())
+        else:
+            word_display.append(character)
+
+    while True:
+        clear()
+        print_hangman(show_hangman_values)
+        print_word(word_display)
+
 
 
 if __name__ == "__main__":
