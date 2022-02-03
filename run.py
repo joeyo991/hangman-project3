@@ -80,6 +80,12 @@ def hangman_game(word):
             for i in range(len(word)):
                 if word[i].upper() == guess.upper():
                     word_display[i] = guess.upper()
+            if check_win(word_display):
+                clear()
+                print("\tCongratulations! You won!")
+                print_hangman_win()
+                print(f"The answer was: {word.upper()}")
+                break
 
 if __name__ == "__main__":
     clear()
