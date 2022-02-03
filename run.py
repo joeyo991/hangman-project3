@@ -28,8 +28,6 @@ def print_word(values):
     print()
 
 
-
-
 def hangman_game(word):
     clear()
     word_display = []
@@ -53,6 +51,19 @@ def hangman_game(word):
         print("Incorrect Guessues: ", incorrect_letters)
         print()
 
+        guess = input("Guess a letter: ")
+        if len(guess) != 1:
+            clear()
+            print("Invalid guess, try one letter a time!")
+            continue
+        if not guess[0].isalpha():
+            clear()
+            print("Invalid guess, English letters only!")
+            continue
+        if guess.upper() in incorrect_letters:
+            clear()
+            print(f"You have already guessed {guess.upper()}!")
+            continue
 
 
 if __name__ == "__main__":
