@@ -76,6 +76,10 @@ def hangman_game(word):
                 print_hangman(hangman_values)
                 print(f"The answer was: {word.upper()}")
                 break
+        else:
+            for i in range(len(word)):
+                if word[i].upper() == guess.upper():
+                    word_display[i] = guess.upper()
 
 if __name__ == "__main__":
     clear()
