@@ -1,3 +1,8 @@
+"""
+This file is for my Code Institute Diploma in
+Software Development (E-commerce Applications).
+It is a CLI python hangman game.
+"""
 import random
 import os
 
@@ -47,8 +52,6 @@ def print_hangman_win():
     print()
 
 
-
-
 def print_word(values):
     """
     This function displays the
@@ -75,7 +78,7 @@ def check_win(values):
 def hangman_game(word):
     """
     This function is the main function
-    for the hangman game. It displays 
+    for the hangman game. It displays
     the word, checks the user inputs,
     and creates graphics for each incorrect
     guess or when the user wins.
@@ -111,17 +114,17 @@ def hangman_game(word):
             clear()
             print("Invalid guess, try one letter a time!")
             continue
-        #Checks if the guess is a letter
+        # Checks if the guess is a letter
         if not guess[0].isalpha():
             clear()
             print("Invalid guess, English letters only!")
             continue
-        #Checks if the letter has already been guessed
+        # Checks if the letter has already been guessed
         if guess.upper() in incorrect_letters:
             clear()
             print(f"You have already guessed {guess.upper()}!")
             continue
-        
+
         # Adds incorrect guesses to the list
         if guess.upper() not in correct_letters:
             incorrect_letters.append(guess.upper())
@@ -135,7 +138,7 @@ def hangman_game(word):
                 print_hangman(hangman_values)
                 print(f"The answer was: {word.upper()}")
                 break
-        # Checks if the user has won the game    
+        # Checks if the user has won the game
         else:
             for i in range(len(word)):
                 if word[i].upper() == guess.upper():
@@ -150,7 +153,7 @@ def hangman_game(word):
 # This is used to execute the code.
 if __name__ == "__main__":
     clear()
-    
+
     # The 3 different game modes that the user can play
     game_modes = {1: "Easy", 2: "Hard", 3: "Phrases"}
 
