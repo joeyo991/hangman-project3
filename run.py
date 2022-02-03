@@ -6,6 +6,8 @@ It is a CLI python hangman game.
 """
 import random
 import os
+import colorama
+from colorama import Back, Fore, Style
 
 
 def clear():
@@ -22,7 +24,7 @@ def print_hangman(values):
     user has an incorrect guess.
     """
     print()
-    print("\t +--------+")
+    print(Fore.RED + "\t +--------+")
     print("\t |       | |")
     print("\t {}       | |".format(values[0]))
     print("\t{}{}{}      | |".format(values[1], values[2], values[3]))
@@ -41,7 +43,7 @@ def print_hangman_win():
     user has won.
     """
     print()
-    print("\t +--------+")
+    print(Fore.YELLOW + "\t +--------+")
     print("\t         | |")
 
     print("\t         | |")
@@ -59,7 +61,7 @@ def print_word(values):
     word/phrase to the user.
     """
     print()
-    print("\t", end="")
+    print(Fore.GREEN + "\t", end="")
     for x in values:
         print(x, end="")
     print()
@@ -105,25 +107,25 @@ def hangman_game(word):
         print_hangman(show_hangman_values)
         print_word(word_display)
         print()
-        print("Incorrect Guessues: ", incorrect_letters)
+        print(Fore.RED + "Incorrect Guesses: ", incorrect_letters)
         print()
 
         # Takes the user's guess
-        guess = input("Guess a letter: ")
+        guess = input(Fore.GREEN + "Guess a letter: ")
         # Checks if the guess is one letter
         if len(guess) != 1:
             clear()
-            print("Invalid guess, try one letter a time!")
+            print(Fore.RED + "Invalid guess, try one letter a time!")
             continue
         # Checks if the guess is a letter
         if not guess[0].isalpha():
             clear()
-            print("Invalid guess, English letters only!")
+            print(Fore.RED + "Invalid guess, English letters only!")
             continue
         # Checks if the letter has already been guessed
         if guess.upper() in incorrect_letters:
             clear()
-            print(f"You have already guessed {guess.upper()}!")
+            print(Fore.RED + f"You have already guessed {guess.upper()}!")
             continue
 
         # Adds incorrect guesses to the list
@@ -135,9 +137,9 @@ def hangman_game(word):
             if guesses == len(hangman_values):
                 print()
                 clear()
-                print("\tGame Over!")
+                print(Fore.RED + "\tGame Over!")
                 print_hangman(hangman_values)
-                print(f"The answer was: {word.upper()}")
+                print(Fore.RED + f"The answer was: {word.upper()}")
                 break
         # Checks if the user has won the game
         else:
@@ -146,9 +148,9 @@ def hangman_game(word):
                     word_display[i] = guess.upper()
             if check_win(word_display):
                 clear()
-                print("\tCongratulations! You won!")
+                print(Fore.YELLOW + "\tCongratulations! You won!")
                 print_hangman_win()
-                print(f"The answer was: {word.upper()}")
+                print(Fore.YELLOW + f"The answer was: {word.upper()}")
                 break
 
 # This is used to execute the code.
@@ -168,7 +170,7 @@ if __name__ == "__main__":
     # Allows the user to choose a mode or quit
     while True:
         print()
-        print("--------------------------")
+        print(Fore.CYAN + "--------------------------")
         print("\tGAME MENU")
         print("--------------------------")
         for key in game_modes:
@@ -176,19 +178,19 @@ if __name__ == "__main__":
             print("Press", len(game_modes) + 1, "to quit.")
             print()
         try:
-            mode_select = int(input("Enter your preferred game mode: "))
+            mode_select = int(input(Fore.GREEN + "Enter your preferred game mode: "))
         except ValueError:
             clear()
-            print("Invalid input. Try again!")
+            print(Fore.RED + "Invalid input. Try again!")
             continue
 
         if mode_select > len(game_modes) + 1:
             clear()
-            print("Invalid selction. Try again!")
+            print(Fore.RED + "Invalid selction. Try again!")
             continue
         elif mode_select == len(game_modes) + 1:
             print()
-            print("Thank you for playing hangman!")
+            print(Fore.YELLOW + "Thank you for playing hangman!")
             break
 
         # Stores the user's choice of mode
