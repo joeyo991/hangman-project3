@@ -28,6 +28,14 @@ def print_word(values):
     print()
 
 
+def check_win(values):
+    for character in values:
+        if character == "_":
+            return False
+    return True
+
+
+
 def hangman_game(word):
     clear()
     word_display = []
