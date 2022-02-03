@@ -1,6 +1,7 @@
 """
 This file is for my Code Institute Diploma in
 Software Development (E-commerce Applications).
+This is my Portfolio Project 3 (Python).
 It is a CLI python hangman game.
 """
 import random
