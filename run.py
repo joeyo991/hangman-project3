@@ -65,6 +65,10 @@ def hangman_game(word):
             print(f"You have already guessed {guess.upper()}!")
             continue
 
+        if guess.upper() not in correct_letters:
+            incorrect_letters.append(guess.upper())
+            show_hangman_values(guesses) = hangman_values[guesses]
+
 
 if __name__ == "__main__":
     clear()
