@@ -168,9 +168,10 @@ if __name__ == "__main__":
     # Allows the user to choose a mode or quit
     while True:
         print()
-        print("--------------------------")
-        print("\tGAME MENU")
-        print("--------------------------")
+        print("------------------------")
+        print("\tHANGMAN")
+        print("------------------------")
+        print("Welcome to Hangman")
         for key in game_modes:
             print("Press", key, "to select", game_modes[key])
             print()
