@@ -173,9 +173,9 @@ if __name__ == "__main__":
         print("--------------------------")
         for key in game_modes:
             print("Press", key, "to select", game_modes[key])
-            print("Press", len(game_modes) + 1, "to quit.")
             print()
         try:
+            print("Press", len(game_modes) + 1, "to quit.")
             mode_select = int(input("Enter your preferred game mode: "))
         except ValueError:
             clear()
