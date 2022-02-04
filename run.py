@@ -171,6 +171,8 @@ if __name__ == "__main__":
         print("\tHANGMAN")
         print("------------------------")
         print("Welcome to Hangman")
+        print("Guess one letter at a time!")
+        print("Goodluck!")
         for key in game_modes:
             print("Press", key, "to select", game_modes[key])
         try:
@@ -182,9 +184,9 @@ if __name__ == "__main__":
             print("Invalid input. Try again!")
             continue
 
-        if mode_select > len(game_modes) + 1:
+        if mode_select > len(game_modes) + 1 or mode_select == 0:
             clear()
-            print("Invalid selction. Try again!")
+            print("Invalid selection. Try again!")
             continue
         elif mode_select == len(game_modes) + 1:
             print()
