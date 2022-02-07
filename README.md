@@ -2,7 +2,7 @@
 
 Hangman is a "guess the word" game where the player tries to guess a random word chosen by the program. The aim of the game is to guess the word within a limited number of lives before a digitial representation of the user is hung. The primary purpose of the game is for entertainment and can be played by both beginners and expert computer users. I chose to make this game as I knew it would be challenging while also being able to imlement a lot of the Python concepts I have learned so far.
 
-This is the process behind <a href="https://hangman-game-pp3.herokuapp.com/" target="_blank" rel="noopener">Hangam</a>
+This is the process behind <a href="https://hangman-game-pp3.herokuapp.com/" target="_blank" rel="noopener">Hangman</a>
 
 ![Hangman Responsiveness](images/responsive3.png)
 
