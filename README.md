@@ -1,8 +1,8 @@
 # **_Hangman_**
 
-Hangman is a "guess the word" game where the player tries to guess a random word chosen by the program. The aim of the game is to guess the word within a limited number of lives before a digitial representation of the user is hung. The primamry purpose of the game is for entertainment and can be played by both beginners and expert computer users. I chose to make this game as I knew it would be challenging while also being able to imlement a lot of the Python concepts I have learned so far.
+Hangman is a "guess the word" game where the player tries to guess a random word chosen by the program. The aim of the game is to guess the word within a limited number of lives before a digitial representation of the user is hung. The primary purpose of the game is for entertainment and can be played by both beginners and expert computer users. I chose to make this game as I knew it would be challenging while also being able to imlement a lot of the Python concepts I have learned so far.
 
-This is the process behind <a href="https://hangman-game-pp3.herokuapp.com/" target="_blank" rel="noopener">Hangman</a>
+This is the process behind [Hangman](https://hangman-game-pp3.herokuapp.com/)
 
 ![Hangman Responsiveness](images/responsive3.png)
 
@@ -25,8 +25,8 @@ This is the process behind <a href="https://hangman-game-pp3.herokuapp.com/" tar
 * Six attempts is given to the player to guess the word.
 * For each correct letter guessed the placeholder dash will be replaced by the correct letter.
 * For each incorrect guess, the number of attempts remaining reduces by one each time and the corresponding hangman graphic is displayed.
-* The player wins when the secret word is guessed within six attempts.
-* The player loses if six attempts are made without guessing the secret word, in which event the final graphic of a whole man hanging from a gallow is displayed.
+* The player wins when the secret word is guessed within six attempts, in which case a graphic of the man standing freely is displayed.
+* The player loses if six attempts are made without guessing the secret word, in which case the final graphic of a whole man hanging from a gallow is displayed.
 * The player then has a choice to play again or exit the game.
 
 # Game Logic Plan
@@ -77,7 +77,7 @@ A flowchart was created before writing any code. This was then used to create th
 
 # Technologies Used
 
-*[Python](https://www.python.org/) - The language used to create the apllication.
+* [Python](https://www.python.org/) - The language used to create the apllication.
 * [Heroku](https://www.heroku.com/) - Used for deployment and hosting the application.
 * [Gitpod](https://www.gitpod.io/#get-started) - Online IDE used for processing the code.
 * [Github](https://github.com/) - Remote hosting version control platform for recording changes made to code by storing it in a repository.
